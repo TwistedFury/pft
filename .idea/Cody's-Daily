@@ -1,0 +1,15 @@
+The purpose of this document is to, well, document my daily work, plans, etc.
+
+Day One (Thursday, February 27th, 2025):
+    Got a decent bit set up, got the github cloned into IntelliJ and was able to generate a UML doc
+    using Claude AI. We'll probably be taking a couple of liberties to try and get this done properly,
+    and that was probably one of them. We'll have to move quick if we are going to try and get this as
+    close to finished as out two-man team. Got a bit behind waiting on Peter to get his head in the game
+    but here we are.
+
+Day Two (Friday, February 28th, 2025):
+    I haven't had any contact with Peter, it doesn't look like he has committed and pushed anything since
+    we got this set up yesterday. But we've had enough dilly-dally-ing and we need to get started on this.
+    Following our UML that we generated yesterday, I plan to start coding on the Transaction (View,
+    Controller, etc.) I'll probably make a branch for it so that Peter can see that that is my plan.
+    We'll see how far I get.
