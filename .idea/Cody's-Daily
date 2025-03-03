@@ -33,3 +33,10 @@ Day Four (Sunday, March 2nd, 2025):
     That adds a bit of complexity to the whole thing, but should make all of the little bits of coding a little more
     worthwhile, I guess.
     Now to upload this part to the github as transactions and merge it to main.
+
+Day Five (Monday, March 3rd, 2025):
+    Don't really have very many plans, other than trying to see if I can implement the FileExample code into here. Other
+    than that, I suppose I'll update my plans in this document.
+
+    I'm starting work on a UserAuthV2 that, if it works, will work more smoothly and allow me to delete the original
+    UserAuth system.
