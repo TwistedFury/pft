@@ -38,22 +38,20 @@ public class Transaction {
 
     public boolean checkFilter(Date start, Date end, TransactionType type) {
         if (this.date.before(end) && this.date.after(start)) {
-            if (this.type == type) {
-                return true;
-            }
+            return this.type == type;
         }
         return false;
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Date: " + date + "\n");
-        sb.append("Transaction #" +  transactionId + "\n");
-        sb.append("Type: " + type + "\n");
-        sb.append("User #" +  userId + "\n");
-        sb.append("Amount $" +  amount + "\n");
-        sb.append("Description: " + description + "\n");
-        sb.append("Category: " + category + "\n");
+        sb.append("Date: ").append(date).append("\n");
+        sb.append("Transaction #").append(transactionId).append("\n");
+        sb.append("Type: ").append(type).append("\n");
+        sb.append("User #").append(userId).append("\n");
+        sb.append("Amount $").append(amount).append("\n");
+        sb.append("Description: ").append(description).append("\n");
+        sb.append("Category: ").append(category).append("\n");
         return sb.toString();
     }
 

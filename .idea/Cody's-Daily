@@ -18,3 +18,18 @@ Day Two (Friday, February 28th, 2025):
     take a break from here. I'll push this up to the transactions branch and we'll see what I can get done
     tomorrow. I can't expect too much but I'll try to get something done, preparing for white gloves on Sunday,
     so I'll probably have an hour or so.. progress is progress anyways.
+
+Day Four (Sunday, March 2nd, 2025):
+    Didn't really have the chance to work on anything yesterday, as by the time I was done cleaning, it was
+    30 minutes till midnight. Got ready for whitegloves and they didn't even show up, how fun.
+
+    I don't really know yet how everything is going to connect, but we will figure that out once we have the
+    ruidmentary stuff coded in most of the different controllers and views. Today, I want to at least get started
+    on the user and authentication system (LoginView, AuthController, User). We'll see how far I can get with that.
+
+    Well, there wasn't really all that much to code. But it's there. I'm going to have to start mulling over how all
+    of this is going to communicate with eachother, I'm thinking one 'overlord' controller that will have access to all
+    other controllers but not anything else.
+    That adds a bit of complexity to the whole thing, but should make all of the little bits of coding a little more
+    worthwhile, I guess.
+    Now to upload this part to the github as transactions and merge it to main.
