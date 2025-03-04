@@ -1,5 +1,7 @@
 package src.main.java.app;
 
+import src.main.java.app.userAuthV2.UserAuth;
+
 import java.io.*;
 import java.util.*;
 
@@ -7,8 +9,14 @@ public class FileExample {
 
     /* Context doesn't matter to it, if the line doesn't contain the regex, it skips it */
 
-    public static void writeToFile(String fileName, List<String> credentials) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+    public static void writeToFile(String fileName, ArrayList<String> credentials) {
+        Map<String, String> credentialsMap = new HashMap<>();
+        credentialsMap.put("username", credentials.get(0).trim());
+        credentialsMap.put("password", credentials.get(1).trim());
+        if (readFromFile(fileName).contains(credentialsMap)) {
+            return;
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             for (String credential : credentials) {
                 writer.write(credential);
                 writer.newLine();
@@ -21,8 +29,8 @@ public class FileExample {
     }
 
 
-    public static List<Map<String, String>> readFromFile(String fileName) {
-        List<Map<String, String>> credentialsList = new ArrayList<>();
+    public static ArrayList<Map<String, String>> readFromFile(String fileName) {
+        ArrayList<Map<String, String>> credentialsList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -49,14 +57,11 @@ public class FileExample {
     public static void main(String[] args) {
         String fileName = "credentials.txt";
 
-        // Sample username:password pairs
-        List<String> credentials = new ArrayList<>();
-        credentials.add("user1:password1");
-        credentials.add("user2:password2");
-        credentials.add("user3:password3");
-
-        // Write to the file
-        writeToFile(fileName, credentials); //* Once it is there, this isn't needed
+        UserAuth uA = new UserAuth();
+        uA.register("admin", "admin");
+        ArrayList<String> credentials = new ArrayList<>();
+        credentials.add("admin:admin");
+        uA.login(credentials);
 
         // Read from the file and parse the data
         List<Map<String, String>> parsedCredentials = readFromFile(fileName);
