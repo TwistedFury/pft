@@ -1,4 +1,4 @@
-package src.main.java.app.userAuth.models;
+package src.main.java.app.userAuthV2.models;
 
 public class User {
 
@@ -27,7 +27,7 @@ public class User {
         return this;
     }
 
-    // UML has a updateUserInfo method that takes in a user..
+    // UML has a updateUserInfo method that takes in a user
     // At that point, just replace the user.
     // That's a responsibility of the controller
 

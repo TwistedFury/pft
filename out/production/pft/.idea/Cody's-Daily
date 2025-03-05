@@ -40,3 +40,12 @@ Day Five (Monday, March 3rd, 2025):
 
     I'm starting work on a UserAuthV2 that, if it works, will work more smoothly and allow me to delete the original
     UserAuth system.
+
+Day Six (Tuesday, March 4th, 2025):
+    I've adapted it to work for our purposes, and have added a verification feature to have the writer check if those
+    "credentials" exist prior to writing them to the file and I have switched the BufferedWriter to be in append mode,
+    as that will allow us to add more credentials to the file by w/o the need for writing everything else to the file
+    as well.
+
+    Next comes implementing that into all of the other sides, which should be rather easy considering that it is set up
+    such that all they need to do is 'extend' FileExample and to send the right inputs for it to work.

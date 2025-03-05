@@ -1,4 +1,4 @@
-package src.main.java.app.userAuth.views;
+package src.main.java.app.userAuthV2.views;
 
 public class LoginView {
 

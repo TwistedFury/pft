@@ -1,6 +1,8 @@
 package src.main.java.app.transactions.models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Transaction {
 
@@ -16,7 +18,7 @@ public class Transaction {
         this.amount = amount;
         this.description = description;
         this.category = category;
-        this.date = new Date();
+        this.date = new GregorianCalendar().getTime();
         this.type = type;
         return true; // TODO: Maybe getters/setters for these?
     }
@@ -37,10 +39,21 @@ public class Transaction {
     }
 
     public boolean checkFilter(Date start, Date end, TransactionType type) {
-        if (this.date.before(end) && this.date.after(start)) {
+        if (date.before(end) && date.after(start)) {
             return this.type == type;
         }
         return false;
+    }
+
+    public ArrayList<String> getInfo() {
+        ArrayList<String> info = new ArrayList<>();
+        info.add(String.valueOf(transactionId));
+        info.add(String.valueOf(amount));
+        info.add(String.valueOf(description));
+        info.add(String.valueOf(category));
+        info.add(String.valueOf(date.getDate() +  "-" + (date.getMonth() + 1) + "-" + (date.getYear() + 1900)));
+        info.add(String.valueOf(type));
+        return info;
     }
 
     public String toString() {
