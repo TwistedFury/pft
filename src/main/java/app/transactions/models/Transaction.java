@@ -51,7 +51,7 @@ public class Transaction {
         info.add(String.valueOf(amount));
         info.add(String.valueOf(description));
         info.add(String.valueOf(category));
-        info.add(String.valueOf(date.getDate() +  "-" + (date.getMonth() + 1) + "-" + (date.getYear() + 1900)));
+        info.add(date.getDate() +  "-" + (date.getMonth() + 1) + "-" + (date.getYear() + 1900));
         info.add(String.valueOf(type));
         return info;
     }

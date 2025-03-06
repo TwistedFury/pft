@@ -165,17 +165,17 @@ public class TransactionController extends FileExample {
         }
     }
 
-    public static void main(String[] args) {
-        TransactionController transactionController = new TransactionController();
-        transactionController.addTransaction(new Transaction(1, 100, "null", "null", TransactionType.INCOME));
-        for (Map<String, String> item :  transactionController.readFromFile("transactions.txt")) {
-            System.out.println(item.get("id"));
-            System.out.println(item.get("amount"));
-            System.out.println(item.get("description"));
-            System.out.println(item.get("category"));
-            System.out.println(item.get("date"));
-            System.out.println(item.get("type"));
-        }
-    }
+//    public static void main(String[] args) {
+//        TransactionController transactionController = new TransactionController();
+//        transactionController.addTransaction(new Transaction(1, 100, "null", "null", TransactionType.INCOME));
+//        for (Map<String, String> item :  transactionController.readFromFile("transactions.txt")) {
+//            System.out.println(item.get("id"));
+//            System.out.println(item.get("amount"));
+//            System.out.println(item.get("description"));
+//            System.out.println(item.get("category"));
+//            System.out.println(item.get("date"));
+//            System.out.println(item.get("type"));
+//        }
+//    }
 
 }
